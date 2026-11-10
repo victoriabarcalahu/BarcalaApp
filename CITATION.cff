@@ -1,0 +1,81 @@
+cff-version: 1.2.0
+title: BarcalaReviewApp
+message: >-
+  If you use this software in a review, please cite it, and please also
+  cite ASReview and the SAFE procedure where you used the active learning
+  or the stopping rule.
+type: software
+authors:
+  - family-names: Barcala
+    given-names: Victoria
+    affiliation: >-
+      HU University of Applied Sciences Utrecht, Research Group Financial
+      Inclusion and New Entrepreneurship
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   <- add yours
+repository-code: "https://github.com/REPLACE-ME/BarcalaReviewApp"
+abstract: >-
+  A local screening workbench for systematic literature reviews. It merges
+  exports from several bibliographic databases into one corpus that records
+  where each record came from, prioritises title-and-abstract screening with
+  active learning, applies a formal stopping rule, and generates the PRISMA
+  2020 flow diagram from the decision records themselves rather than from
+  figures entered by hand.
+keywords:
+  - systematic review
+  - evidence synthesis
+  - screening
+  - active learning
+  - PRISMA
+  - bibliometrics
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-11-03"
+references:
+  - type: article
+    authors:
+      - family-names: van de Schoot
+        given-names: Rens
+      - family-names: de Bruin
+        given-names: Jonathan
+      - family-names: Schram
+        given-names: Raoul
+    title: >-
+      An open source machine learning framework for efficient and
+      transparent systematic reviews
+    journal: Nature Machine Intelligence
+    volume: 3
+    issue: 2
+    start: 125
+    end: 133
+    year: 2021
+    doi: 10.1038/s42256-020-00287-7
+  - type: article
+    authors:
+      - family-names: Boetje
+        given-names: Josien
+      - family-names: van de Schoot
+        given-names: Rens
+    title: >-
+      The SAFE procedure: a practical stopping heuristic for active
+      learning-based screening in systematic reviews and meta-analyses
+    journal: Systematic Reviews
+    volume: 13
+    start: 81
+    year: 2024
+    doi: 10.1186/s13643-024-02502-7
+  - type: article
+    authors:
+      - family-names: Page
+        given-names: Matthew J.
+      - family-names: McKenzie
+        given-names: Joanne E.
+      - family-names: Bossuyt
+        given-names: Patrick M.
+    title: >-
+      The PRISMA 2020 statement: an updated guideline for reporting
+      systematic reviews
+    journal: BMJ
+    volume: 372
+    start: n71
+    year: 2021
+    doi: 10.1136/bmj.n71

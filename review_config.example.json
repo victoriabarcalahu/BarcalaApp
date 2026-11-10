@@ -1,0 +1,122 @@
+{
+  "screener": "",
+  "mailto": "",
+  "themes": [
+    {
+      "id": "t1",
+      "name": "Theme 1",
+      "colour": "#0072B2"
+    },
+    {
+      "id": "t2",
+      "name": "Theme 2",
+      "colour": "#E69F00"
+    },
+    {
+      "id": "t3",
+      "name": "Theme 3",
+      "colour": "#009E73"
+    },
+    {
+      "id": "t4",
+      "name": "Theme 4",
+      "colour": "#CC79A7"
+    }
+  ],
+  "criteria": {
+    "include": [
+      "Matches the population, intervention or phenomenon of interest",
+      "Study design is eligible",
+      "Addresses at least one of the research themes",
+      "Peer-reviewed journal article, review, or book chapter",
+      "Within the publication window",
+      "Written in an accepted language"
+    ],
+    "exclude": [
+      "Off topic",
+      "No relevance to the research themes",
+      "Wrong setting or population",
+      "Wrong publication type (editorial, abstract, book review)",
+      "Not in an accepted language",
+      "Duplicate of another record",
+      "Full text not retrievable",
+      "Other (see notes)"
+    ]
+  },
+  "rules": [
+    {
+      "id": "retracted",
+      "name": "Retracted publications",
+      "reason": "Retracted",
+      "enabled": true,
+      "params": {},
+      "note": "Almost always right to exclude."
+    },
+    {
+      "id": "lang",
+      "name": "Not in an accepted language",
+      "reason": "Not in an accepted language",
+      "enabled": true,
+      "params": {
+        "allow": [
+          "en"
+        ],
+        "keep_unknown": true
+      },
+      "note": "Records whose language the source does not know are kept by default, because unknown is not the same as not-English."
+    },
+    {
+      "id": "wrongtype",
+      "name": "Wrong publication type",
+      "reason": "Wrong publication type",
+      "enabled": true,
+      "params": {
+        "block": [
+          "paratext",
+          "editorial",
+          "erratum",
+          "letter",
+          "note",
+          "other"
+        ]
+      },
+      "note": "Editorials, errata and front matter."
+    },
+    {
+      "id": "noabstract",
+      "name": "No abstract available",
+      "reason": "No abstract to screen",
+      "enabled": false,
+      "params": {},
+      "note": "Off by default. These can only be screened on the title, but some are real papers whose publisher withholds abstracts — Elsevier especially. Read the titles before switching this on."
+    },
+    {
+      "id": "old_uncited",
+      "name": "Old and never cited",
+      "reason": "5+ years old with no citations",
+      "enabled": false,
+      "params": {
+        "years": 5
+      },
+      "note": "Off by default. After this long, zero citations is no longer explained by the paper being recent, so it is a real signal — but it still removes work that is simply in a quiet venue."
+    },
+    {
+      "id": "region",
+      "name": "Outside the region of interest",
+      "reason": "Outside the region of interest",
+      "enabled": false,
+      "params": {
+        "regions": [],
+        "basis": "both",
+        "keep_unknown": true
+      },
+      "note": "Off by default, and only does anything once you name regions in the config. `basis` is text, affiliation or both; keep_unknown keeps records whose affiliation is unrecorded, because unknown is not the same as elsewhere."
+    }
+  ],
+  "country_patterns": {},
+  "theme_patterns": {},
+  "stopping": {
+    "consecutive": 50,
+    "min_percent": 10
+  }
+}

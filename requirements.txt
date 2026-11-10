@@ -1,0 +1,21 @@
+# BarcalaReviewApp runs on the Python standard library alone. Everything
+# below is optional and adds a capability; none of it is needed to screen.
+#
+#     pip install -r requirements.txt
+
+# Reading and writing .xlsx. Needed for an Excel corpus or an Excel export;
+# without it the app still reads and writes CSV.
+openpyxl>=3.1
+
+# Reading .xls, the old format Web of Science still exports. Needed only to
+# merge a Web of Science file; without it that one source is skipped and the
+# merge stops and tells you so.
+xlrd>=2.0
+
+# Active learning. With ASReview installed, the screening queue is ordered by
+# their models; without it a built-in TF-IDF and naive Bayes ranker is used.
+# Needs Python 3.10 or later.
+asreview>=2.0
+
+# Running the tests
+pytest>=7.0
